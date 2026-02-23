@@ -44,6 +44,7 @@ import {
   move_cell_to_layer,
   get_active_layer,
   create_layer,
+  get_diagram_xml,
   type DrawioCellOptions,
 } from "./drawio-tools";
 
@@ -210,6 +211,11 @@ const toolDefinitions = [
     name: "create-layer",
     params: new Set(["name"]),
     handler: create_layer,
+  },
+  {
+    name: "get-diagram-xml",
+    params: new Set([]),
+    handler: get_diagram_xml,
   },
 ];
 

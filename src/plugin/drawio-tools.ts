@@ -720,3 +720,12 @@ export function create_layer(ui: any, options: DrawioCellOptions) {
     name: options.name,
   };
 }
+
+export function get_diagram_xml(ui: any) {
+  const mxUtils = (window as any).mxUtils;
+  const xmlNode = ui.editor.getGraphXml();
+  return {
+    xml: mxUtils.getXml(xmlNode),
+    format: "drawio-xml",
+  };
+}

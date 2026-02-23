@@ -155,3 +155,11 @@ Creates a new layer in the diagram.
 - `name`: Name for the new layer
 
 *Returns*: Information about the newly created layer
+
+## Diagram Export Tools
+
+### `get-diagram-xml`
+
+Exports the current Draw.io diagram as raw XML. Use this to retrieve the full diagram structure so it can be shared with or discussed by an AI assistant.
+
+*Returns*: Object with `xml` (the full diagram XML string) and `format` (`"drawio-xml"`)
