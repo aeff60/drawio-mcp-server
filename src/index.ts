@@ -601,6 +601,14 @@ server.tool(
   default_tool(TOOL_create_layer, context),
 );
 
+const TOOL_get_diagram_xml = "get-diagram-xml";
+server.tool(
+  TOOL_get_diagram_xml,
+  "Exports the current Draw.io diagram as raw XML. Use this to retrieve the full diagram structure so it can be shared with or discussed by an AI assistant.",
+  {},
+  default_tool(TOOL_get_diagram_xml, context),
+);
+
 async function start_stdio_transport() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
